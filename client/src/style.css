@@ -1,0 +1,29 @@
+.header__extra {
+    margin-left: 140px;
+}
+
+.ps-block--user-header {
+    margin-right: none;
+    margin-left: 40px;
+}
+
+.full {
+    margin-left: -10px;
+    width: 106%;
+}
+
+.carsoul{
+    margin-left: 15px !important
+}
+
+.widget-title{
+    margin-left: 0px;
+}
+
+.ps-product__price{
+    align-items: flex-start;
+}
+
+.related {
+    margin-top: 20px;
+}

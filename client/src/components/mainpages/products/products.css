@@ -1,0 +1,117 @@
+.products{
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    margin: 20px 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+/* ----------- Product Item ----------------- */
+@import url("../utils/productItem/productItem.css");
+
+.delete-all{
+    text-align: right;
+    margin: 20px;
+}
+.delete-all input{
+    height: 25px;
+    width: 25px;
+    transform: translateY(5px);
+    margin: 0 15px;
+}
+.delete-all span{
+    text-transform: uppercase;
+    color: rgb(3, 165, 206);
+    letter-spacing: 1.3px;
+}
+.delete-all button{
+    border: 1px solid crimson;
+    padding: 10px 25px;
+    color: crimson;
+    text-transform: uppercase;
+}
+
+/* ------------ Filters Menu ----------------- */
+select {
+    font-weight: 600;
+}
+
+option {
+    font-weight: 600;
+}
+.filter_menu{
+    width: 100%;
+    min-height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    padding: 0 10px;
+    font-weight: 600;
+}
+.filter_menu select, input{
+    border: 1px solid #ccc;
+    outline: none;
+    height: 40px;
+    padding: 0 5px;
+}
+.filter_menu input{
+    flex: 1;
+    margin: 0 10px;
+    font-weight:600;
+}
+
+/* -------------------- Load More --------------- */
+.load_more{
+    text-align: center;
+    margin-top: 60px;
+}
+.load_more button{
+    padding: 10px 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    text-transform: capitalize;
+    margin:auto;
+    display:block;
+}
+
+.navbar table {
+    border-collapse:collapse;
+    font-weight: 600;
+    background: #555;
+    width: 100%;
+    min-height: 50px; 
+}
+
+.navbar a{
+    color: white;
+}
+
+.navbar a:active{
+    background-color: black;
+}
+
+.navbar td, th{
+    border: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.navbar td:hover{
+    background: #9923ad;
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+/* The animation code */
+@keyframes example {
+    from {background-color: #555;}
+    to {background-color: #9923ad;}
+  }
+  
