@@ -26,9 +26,10 @@ function Products() {
     const [isCheck, setIsCheck] = useState(false)
     const [productsMen, setProductsMen] = state.productsAPI.productsMen
     const [productsWoman, setProductsWoman] = state.productsAPI.productWoman
+    const [productsChildren, setProductsChildren] = state.productsAPI.productChildren
     const [categories] = state.categoriesAPI.categories
     
-
+    console.log(categories)
     
     const handleCheck = (id) =>{
         products.forEach(product => {
@@ -148,7 +149,7 @@ function Products() {
                         <div class="ps-section__header">
                             <h3>Mens</h3>  
                             <ul class="ps-section__links">
-                                <li><a href="shop-grid.html">View All</a></li>
+                                <Link to="/category/5ff6fa504813bf55c4caab7e">View All</Link>
                             </ul>
                         </div>
                         <div class="ps-section__content">
@@ -166,7 +167,7 @@ function Products() {
                         <div class="ps-section__header">
                             <h3>Womens</h3>  
                             <ul class="ps-section__links">
-                                <li><a href="shop-grid.html">View All</a></li>
+                                <Link to="/category/5ff6fad54813bf55c4caab7f">View All</Link>
                             </ul>
                         </div>
                         <div class="ps-section__content">
@@ -174,6 +175,24 @@ function Products() {
                                 {   
                 
                                     productsWoman.slice(0,6).map(product => {
+                                        return <ProductItem key={product._id} product={product}
+                                        isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
+                                    })
+                                }  
+                        </OwlCarousel> 
+                        </div>
+
+                        <div class="ps-section__header mt-5">
+                            <h3>Children</h3>  
+                            <ul class="ps-section__links">
+                                <Link to="/category/5ff6fae34813bf55c4caab80">View All</Link>
+                            </ul>
+                        </div>
+                        <div class="ps-section__content">
+                        <OwlCarousel className="owl-theme" {...options} >
+                                {   
+                
+                                    productsChildren.slice(0,6).map(product => {
                                         return <ProductItem key={product._id} product={product}
                                         isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
                                     })

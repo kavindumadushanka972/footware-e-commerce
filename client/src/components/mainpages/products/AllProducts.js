@@ -20,7 +20,6 @@ function ProductsAll() {
     const [category, setCategory] = state.productsAPI.category
     
     
-    //setCategory('')
 
     const handleCheck = (id) =>{
         products.forEach(product => {

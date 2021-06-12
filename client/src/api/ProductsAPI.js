@@ -15,8 +15,11 @@ function ProductsAPI() {
     const [result, setResult] = useState(0)
     const [resultMen, setResultMen] = useState(0)
     const [categoryWoman, setCategoryWoman] = useState('5ff6fad54813bf55c4caab7f')
+    const [categoryChildren, setCategoryChildren] = useState('5ff6fae34813bf55c4caab80')
     const [productWoman, setProductsWoman] = useState([])
     const [resultWoman, setResultWoman] = useState(0)
+    const [productChildren, setProductsChildren] = useState([])
+    const [resultChildren, setResultChildren] = useState(0)
     
 
     useEffect(() =>{
@@ -51,6 +54,16 @@ function ProductsAPI() {
         }
         getProducts()
     },[callback, category, sort, search, page])
+
+    useEffect(() =>{
+        const getProducts = async () => {
+    
+            const resChildren = await axios.get(`/api/products?limit=${page*6}&category=${categoryChildren}&${sort}&title[regex]=${search}`)
+            setProductsChildren(resChildren.data.products)
+            setResultChildren(resChildren.data.result)
+        }
+        getProducts()
+    },[callback, category, sort, search, page])
     
     return {
         products: [products, setProducts],
@@ -65,7 +78,10 @@ function ProductsAPI() {
         categoryMen: [categoryMen, setCategoryMen],
         categoryWoman: [categoryWoman, setCategoryWoman],
         productWoman: [productWoman, setProductsWoman],
-        resultWoman: [resultWoman, setResultWoman]
+        resultWoman: [resultWoman, setResultWoman],
+        categoryMen: [categoryChildren, setCategoryChildren],
+        productChildren: [productChildren, setProductsChildren],
+        resultChildren: [resultChildren, setResultChildren]
 
     }
 }

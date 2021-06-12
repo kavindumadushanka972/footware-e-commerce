@@ -153,8 +153,10 @@ function Header() {
                             </div><Link to='/' className="ps-logo">{<img src={logo} alt="" width="200" />}</Link>
                         </div>
                         <div class="header__content-center">
-                            <form class="ps-form--quick-search" action="index.html" method="get">
-                                <div class="form-group--icon"><i class="icon-chevron-down"></i>
+                            <form className="ps-form--quick-search">
+                                <img className="ml-auto" src="img/banner3.jpg" alt="" srcset="" height="35px" />
+                                <img className="ml-2" src="img/banner2.jpg" alt="" srcset="" height="35px" />
+                                {/* <div class="form-group--icon"><i class="icon-chevron-down"></i>
                                     <select class="form-control">
                                         <option value="1">All</option>
                                         <option value="1">Bags</option>
@@ -165,7 +167,7 @@ function Header() {
                                     </select>
                                 </div>
                                 <input class="form-control" type="text" placeholder="I'm shopping for..." />
-                                <button>Search</button>
+                                <button className="btn btn-lg">Search</button> */}
                             </form>
                         </div>
                         <div class="header__content-right">
