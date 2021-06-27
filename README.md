@@ -4,6 +4,8 @@
 
 ## Author: Kavindu Madushanka
 
+### Demo --> https://mern-myshop.herokuapp.com/
+
 ## Install dependencies for server 
 ### `npm install`
 
