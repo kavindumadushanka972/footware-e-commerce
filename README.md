@@ -25,7 +25,7 @@
 
 ### Server runs on http://localhost:5000 and client on http://localhost:3000
 
-<img src="https://github.com/kavindumadushanka972/footware-e-commerce/blob/master/1.PNG">
-<img src="https://github.com/kavindumadushanka972/footware-e-commerce/blob/master/2.PNG">
-<img src="https://github.com/kavindumadushanka972/footware-e-commerce/blob/master/3.PNG">
-<img src="https://github.com/kavindumadushanka972/footware-e-commerce/blob/master/4.PNG">
+<img src="1.PNG">
+<img src="2.PNG">
+<img src="3.PNG">
+<img src="4.PNG">
